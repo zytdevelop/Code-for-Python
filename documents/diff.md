@@ -79,4 +79,14 @@ python2.6是python2.x和python3.x的过渡版本,python3.x设计的时候没有�
 - python3.x 用 ```in``` 关键字替代了python2.x 中的has_key()
 - python3.x 的字典里面```dict.keys(), dict.items(), dict.values()``` 返回迭代器
   
-## 9.
+## 9. 高阶函数
+- python2.x : ```zip(),map(),filter()```直接返回列表
+- python3.x : ```zip(),map(),filter()```返回迭代器(如果需要转换成列表就用list()函数强制转换)
+  
+## 10. range() 和 xrange()
+- python2.x 两者都有,其中range()返回列表,xrange()返回迭代器
+- python3.x 只有range()相当于python2.x中的xrange()函数,返回迭代器  
+**只留下xrange()的用法是为了节省空间**
+  
+# 总结
+> python3.x改动的最终目的是为了提高代码的可读性
