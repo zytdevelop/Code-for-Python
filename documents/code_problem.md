@@ -14,3 +14,6 @@
 - bytes:
     + 内存中的表现形式: 非Unicode(python3x中为UTF-8)
     + 文件中的表现形式: b'\xe6\xb1\x89\xe5\xad\x97'
+    
+ - python3x 中的编码函数encode(), 解码函数为decode()
+ 
