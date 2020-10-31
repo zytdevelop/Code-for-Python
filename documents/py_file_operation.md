@@ -37,3 +37,22 @@ with open('/') as fp:
 ## 其他功能
 - tell() 返回光标位置
 - seek() 跳转到文件指定位置
+
+
+## 修改
+思路:
+1. 读模式打开原文件作为fp1
+2. 写模式创建一个新文件fp2
+3. 将 fp1 修改完毕, 写入fp2
+4. 删除 fp1, 将 fp2 重命名为 fp1
+
+```python
+import os
+with open('fp1.txt', encoding='utf-8') as fp1, open('fp2.txt', encoding='uft-8', mode='w') as fp2:
+    source_data = fp1.read()
+    # 中间修改原文件的内容
+    fp2.write()
+os.remove('fp1.txt')
+os.rename('fp2.txt', 'fp1.txt')
+
+```
